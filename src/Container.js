@@ -9,6 +9,7 @@ function Container(props) {
   const songsList = songs.map((song) => 
     <SongRow
       id={song.id} 
+      playSong={playSong}
       title={song.title}
       artist={song.artist}
       rating={song.rating}
@@ -22,11 +23,15 @@ function Container(props) {
     setSongs([...songs, newSong]);
   }  
 
-
   function deleteSong(id) {
     const remainingSongs = songs.filter((song) => song.id !== id);
     setSongs(remainingSongs);
   }
+
+  function playSong(title, artist) {
+    const songPlay = title + "+" + artist;
+    window.open("http://www.google.com/search?q=" + escape(songPlay));
+  }  
 
   return (
     <div className='songTable'>

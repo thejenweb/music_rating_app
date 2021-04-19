@@ -21,7 +21,7 @@ function SongRow(props) {
       </div>
       
       <div id="playButton">
-        <button type="button">
+        <button type="button" onClick={() => props.playSong(props.title, props.artist)}>
           {playButton}
         </button>
       </div>

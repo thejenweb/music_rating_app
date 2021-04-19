@@ -47,7 +47,8 @@ function SongForm(props) {
           value={songArtist}
           onChange={handleArtistChange}
            />
-        <button><StarRating addRating={addRating}/></button>
+        <label htmlFor="rating">Rate and Submit: </label>
+        <button id="rating" name='rating'><StarRating addRating={addRating}/></button>
         {/* <input type="submit" hidden value="" /> */}
      
     </form>
