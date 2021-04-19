@@ -35,7 +35,7 @@ function SongRow(props) {
       </div>
       
       <div id="removeButton">
-        <button type="button">
+        <button type="button" onClick={() => props.deleteSong(props.id)}>
           {removeButton}
         </button>
       </div>

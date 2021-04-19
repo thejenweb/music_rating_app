@@ -12,8 +12,15 @@ function Container(props) {
       artist={song.artist}
       rating={song.rating}
       key={song.id}
+      deleteSong={deleteSong} 
     />
   );
+
+  function deleteSong(id) {
+    const remainingSongs = songs.filter((song) => song.id !== id);
+    setSongs(remainingSongs);
+  }
+
   return (
     <div className='songTable'>
       <header>
