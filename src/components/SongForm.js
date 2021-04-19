@@ -1,9 +1,10 @@
 import React, {useState} from "react";
+import StarRating from "./StarRating";
 
 function SongForm(props) {
   const [songTitle, setTitle] = useState("");
   const [songArtist, setArtist] = useState("");
-  
+  const [songRating, setRating] = useState(2);
 
   function handleTitleChange(e) {
     setTitle(e.target.value);
@@ -13,12 +14,20 @@ function SongForm(props) {
     setArtist(e.target.value);
   }
 
+ 
   function handleSubmit(e) {
     e.preventDefault();
-    props.addSong(songTitle, songArtist);
+    props.addSong(songTitle, songArtist, songRating);
     setTitle("");
     setArtist("");
+    setRating(0)
   }
+
+
+  function addRating(rating) {
+    setRating(rating);
+  }
+
   return (
     <form onSubmit={handleSubmit}>
       <label htmlFor="title">Title</label>
@@ -38,9 +47,12 @@ function SongForm(props) {
           value={songArtist}
           onChange={handleArtistChange}
            />
-        <input type="submit" hidden value=""></input>
+        <button><StarRating addRating={addRating}/></button>
+        {/* <input type="submit" hidden value="" /> */}
+     
     </form>
   )
 }
 
 export default SongForm;
+

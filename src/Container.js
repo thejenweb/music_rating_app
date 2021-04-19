@@ -18,9 +18,10 @@ function Container(props) {
   );
 
   function addSong(title, artist, rating) {
-    const newSong = {id: songs.length+1, title: title, artist: artist}
+    const newSong = {id: songs.length+1, title: title, artist: artist, rating: rating}
     setSongs([...songs, newSong]);
   }  
+
 
   function deleteSong(id) {
     const remainingSongs = songs.filter((song) => song.id !== id);
@@ -37,7 +38,8 @@ function Container(props) {
       <ul className='songRow'>{songsList}</ul>
       <div className='songForm'>
         <SongForm 
-          addSong={addSong}/>
+          addSong={addSong}
+          />
       </div>
     </div>
     

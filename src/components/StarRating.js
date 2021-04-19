@@ -47,8 +47,12 @@ function StarRating(props) {
     setHoverRating(0);
   };
   const onSaveRating = (index) => {
+    props.addRating(index);
     setRating(index);
+    setRating(0);
   }; 
+
+  
   return(
   <div className="starRating">
       {[1,2,3,4,5].map((index) => {
@@ -59,7 +63,8 @@ function StarRating(props) {
                   hoverRating={hoverRating}
                   onMouseEnter={onMouseEnter} 
                   onMouseLeave={onMouseLeave} 
-                  onSaveRating={onSaveRating} />   
+                  onSaveRating={onSaveRating}
+                   />   
         )
       })}
     
