@@ -15,8 +15,13 @@ function Container(props) {
     />
   );
   return (
-    <div>
-      <ul>{songsList}</ul>
+    <div className='songTable'>
+      <header>
+          <div>Song/Artist</div>
+          <div>Rating</div>
+          <div>Remove</div>
+      </header>
+      <ul className='songRow'>{songsList}</ul>
     </div>
   )
 }

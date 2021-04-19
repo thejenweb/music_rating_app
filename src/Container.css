@@ -1,1 +1,81 @@
+@font-face {
+  font-family: 'Obibok-Bold';
+  src: url('./fonts/Obibok-Bold.woff')
+}
 
+@font-face {
+  font-family: 'Obibok-Light';
+  src: url('./fonts/Obibok-Light.woff')
+}
+
+@font-face {
+  font-family: 'Obibok-Regular';
+  src: url('./fonts/Obibok-Regular.woff')
+}
+
+
+body {
+  font-family: Obibok-Light;
+}
+
+img {
+  width: 1.5rem;
+}
+
+button {
+  background-color: transparent;
+  border: none;
+}
+
+
+
+.songTable {
+  margin: 1rem;
+  display: grid;
+  grid-template-areas:
+    ". . header header header"
+    "row row row row row"
+    "form form form . .";
+  grid-template-columns: 0.2fr 0.3fr 2fr 2fr 0.4fr;
+  
+}
+
+header {
+  grid-area: header;
+  display: grid;
+  grid-template-columns: subgrid;
+  
+}
+
+header > div {
+  text-align: center;
+  font-size: 50%;
+}
+
+.songRow {
+  border-top: 0.5px solid grey;
+  border-right: 0.5px solid grey;
+  border-left: 0.5px solid grey;
+  padding: 0;
+  font-size: 95%;
+  grid-area: row;
+}
+
+li {
+  border-bottom: 0.5px solid grey;
+  border-collapse: collapse;
+}
+
+#index {
+  padding: 1rem;
+  border-right: 0.7px solid grey;
+}
+
+.songRow > li{
+  padding-top: 0.3em;
+  padding-bottom: 0.3rem;
+  text-align: center;
+  display: grid;
+  grid-template-columns: 0.2fr 0.3fr 2fr 2fr 0.4fr;
+  align-items: center;
+}
