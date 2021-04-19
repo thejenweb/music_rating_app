@@ -71,6 +71,11 @@ li {
   border-right: 0.7px solid grey;
 }
 
+#songArtist {
+  text-align: left;
+  padding-left: 3.5em;
+}
+
 .songRow > li{
   padding-top: 0.3em;
   padding-bottom: 0.3rem;
@@ -78,4 +83,10 @@ li {
   display: grid;
   grid-template-columns: 0.2fr 0.3fr 2fr 2fr 0.4fr;
   align-items: center;
+}
+
+
+.starRating {
+  display: flex;
+  justify-content: center;
 }

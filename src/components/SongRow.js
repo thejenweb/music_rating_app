@@ -1,4 +1,5 @@
 import React from 'react';
+import StarRating from "./StarRating";
 import trashSVG from "./../assets/trash.svg";
 import playSVG from "./../assets/play.svg";
 
@@ -25,12 +26,12 @@ function SongRow(props) {
         </button>
       </div>
       
-      <div id="song_artist">
+      <div id="songArtist">
         {title}<br></br> <i>by</i> {artist}
       </div>
       
       <div id="rating">
-        {rating}
+        <StarRating rating={rating}/> 
       </div>
       
       <div id="removeButton">
