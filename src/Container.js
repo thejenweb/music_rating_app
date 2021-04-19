@@ -1,5 +1,6 @@
 import React, {useState} from 'react'
 import SongRow from './components/SongRow';
+import SongForm from './components/SongForm';
 import './Container.css'
 
 function Container(props) {
@@ -16,6 +17,11 @@ function Container(props) {
     />
   );
 
+  function addSong(title, artist, rating) {
+    const newSong = {id: songs.length+1, title: title, artist: artist}
+    setSongs([...songs, newSong]);
+  }  
+
   function deleteSong(id) {
     const remainingSongs = songs.filter((song) => song.id !== id);
     setSongs(remainingSongs);
@@ -29,7 +35,12 @@ function Container(props) {
           <div>Remove</div>
       </header>
       <ul className='songRow'>{songsList}</ul>
+      <div className='songForm'>
+        <SongForm 
+          addSong={addSong}/>
+      </div>
     </div>
+    
   )
 }
 

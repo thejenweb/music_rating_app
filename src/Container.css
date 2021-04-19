@@ -19,7 +19,7 @@ body {
 }
 
 img {
-  width: 1.5rem;
+  width: 2rem;
 }
 
 button {
@@ -36,7 +36,7 @@ button {
     ". . header header header"
     "row row row row row"
     "form form form . .";
-  grid-template-columns: 0.2fr 0.3fr 2fr 2fr 0.4fr;
+  grid-template-columns: 50px 0.3fr 2fr 2fr 0.4fr;
   
 }
 
@@ -53,22 +53,22 @@ header > div {
 }
 
 .songRow {
-  border-top: 0.5px solid grey;
-  border-right: 0.5px solid grey;
-  border-left: 0.5px solid grey;
+  border-top: 3px solid lightgray;
+  border-right: 3px solid lightgray;
+  border-left: 3px solid lightgray;
   padding: 0;
   font-size: 95%;
   grid-area: row;
 }
 
 li {
-  border-bottom: 0.5px solid grey;
+  border-bottom: 3px solid lightgray;
   border-collapse: collapse;
 }
 
 #index {
   padding: 1rem;
-  border-right: 0.7px solid grey;
+  border-right: 3px solid lightgray;
 }
 
 #songArtist {
@@ -81,7 +81,7 @@ li {
   padding-bottom: 0.3rem;
   text-align: center;
   display: grid;
-  grid-template-columns: 0.2fr 0.3fr 2fr 2fr 0.4fr;
+  grid-template-columns: 50px 0.3fr 2fr 2fr 0.4fr;
   align-items: center;
 }
 
@@ -89,4 +89,24 @@ li {
 .starRating {
   display: flex;
   justify-content: center;
+}
+
+
+.songForm {
+  padding-top: 5em;
+  font-size: 70%;
+  grid-area: form;
+}
+
+input {
+  margin-bottom: 0.5rem;
+  margin-top: 0.2rem;
+  padding: 0.5rem;
+  border: 2px solid #a4a4a4;
+  display: block;
+}
+
+input[type=submit] {
+  background-color: transparent;
+  border: none;
 }
