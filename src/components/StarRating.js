@@ -15,7 +15,7 @@ function Rating(props) {
     hoverRating,
     onMouseEnter,
     onMouseLeave,
-    onSaveRating
+    onSaveRating,
   } = props;
 
   const fill = useMemo(() => {
@@ -47,10 +47,13 @@ function StarRating(props) {
     setHoverRating(0);
   };
   const onSaveRating = (index) => {
-    props.addRating(index);
     setRating(index);
+    props.addRating(index);
     setRating(0);
   }; 
+
+
+
 
   
   return(

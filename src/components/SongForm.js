@@ -4,7 +4,7 @@ import StarRating from "./StarRating";
 function SongForm(props) {
   const [songTitle, setTitle] = useState("");
   const [songArtist, setArtist] = useState("");
-  const [songRating, setRating] = useState(2);
+  const [songRating, setRating] = useState(0);
 
   function handleTitleChange(e) {
     setTitle(e.target.value);
@@ -26,6 +26,7 @@ function SongForm(props) {
 
   function addRating(rating) {
     setRating(rating);
+    
   }
 
   return (

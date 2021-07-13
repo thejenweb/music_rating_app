@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from "react";
 import StarRating from "./StarRating";
 import trashSVG from "./../assets/trash.svg";
 import playSVG from "./../assets/play.svg";
@@ -6,11 +6,13 @@ import playSVG from "./../assets/play.svg";
 
 
 function SongRow(props) {
+  const [rating, setRating] = useState(props.rating);
+
   const indice = props.id;
   const playButton = <img src={playSVG} alt="Remove button" />
   const title = props.title;
   const artist = props.artist;
-  const rating = props.rating;
+  // const rating = props.rating;
   const removeButton = <img src={trashSVG} alt="Delete button" />
 
 
